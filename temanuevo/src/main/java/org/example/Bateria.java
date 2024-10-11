@@ -24,4 +24,8 @@ public class Bateria {
         String mayusculas = frase.toUpperCase();
         System.out.println("La frase en mayusculas es " + mayusculas);
     }
+
+    public void ejercicio2(){
+        
+    }
 }
