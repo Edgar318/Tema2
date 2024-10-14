@@ -15,8 +15,8 @@ public class Practica4 {
                 String[] partes = fecha.split("/");
 
                 if (partes.length != 3) {
-                    System.out.println("Formato incorrecto. Asegúrate de usar dd/mm/aaaa.");
-                    continue; 
+                    System.out.println("Formato incorrecto es el dd/mm/aaaa.");
+                    continue;
                 }
 
                 int dia = Integer.parseInt(partes[0]);
