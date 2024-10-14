@@ -43,7 +43,7 @@ public class Practica4 {
                 System.out.println("Tu número de la suerte es: " + numerosuerte);
 
             } catch (NumberFormatException e) {
-                System.out.println("Por favor, introduce solo números.");
+                System.out.println("Error introduce solo números.");
             }
         }
     }
