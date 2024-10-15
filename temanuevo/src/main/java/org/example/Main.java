@@ -1,7 +1,7 @@
 package org.example;
 public class Main {
     public static void main(String[] args) {
-            Bateria excepcion = new Bateria();
-            excepcion.excepcion();
+            Practica4 practica4 = new Practica4();
+            practica4.practica4();
         }
     }

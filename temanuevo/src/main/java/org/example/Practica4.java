@@ -25,7 +25,6 @@ public class Practica4 {
 
                 if (dia <= 0 || mes <= 0 || año <= 0) {
                     System.out.println("Los números deben ser positivos y mayores que cero.");
-                    continue;
                 }
 
                 error = true;
