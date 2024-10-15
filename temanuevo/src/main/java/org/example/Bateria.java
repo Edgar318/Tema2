@@ -64,6 +64,38 @@ public class Bateria {
 
 
     }
+
+    public void excepcion() {
+
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("dividendo: ");
+        int dividendo = 0;
+
+        if (teclado.hasNextInt()){
+            dividendo = teclado.nextInt();
+        }else{
+            System.out.println("Has introducido un formato incorrecto no es un numero");
+        }
+
+        System.out.println("divisor: ");
+        String divisor = teclado.next();
+        int divisor_entero = 0;
+        try{
+            divisor_entero = Integer.parseInt(divisor);
+        }catch(NumberFormatException e1){
+            System.out.println("El divisor introducido no es un número" + e1.getMessage());
+        }
+        int resultado = 0;
+        try{
+            resultado = dividendo / divisor_entero;
+
+        }catch (ArithmeticException e2){
+            System.out.println("No se pùede dividir entre 0: " + e2.getMessage());
+        }
+
+        System.out.println("El resultado es: " +resultado );
+    }
+
 }
 
 
