@@ -15,7 +15,7 @@ public class Practica4 {
                 String[] partes = fecha.split("/");
 
                 if (partes.length != 3) {
-                    System.out.println("Formato incorrecto es el dd/mm/aaaa.");
+                    System.out.println("Formato incorrecto, debe ser dd/mm/aaaa.");
                     continue;
                 }
 
@@ -33,18 +33,17 @@ public class Practica4 {
                 int suma = dia + mes + año;
                 System.out.println(dia + " + " + mes + " + " + año + " = " + suma);
 
-                int numerosuerte = 0;
                 String sumaComoString = String.valueOf(suma);
-
-                for (int i = 0; i < sumaComoString.length(); i++) {
-                    numerosuerte += Character.getNumericValue(sumaComoString.charAt(i));
-                }
+                int numerosuerte = sumaComoString.chars()
+                        .map(Character::getNumericValue)
+                        .sum();
 
                 System.out.println("Tu número de la suerte es: " + numerosuerte);
 
             } catch (NumberFormatException e) {
-                System.out.println("Error introduce solo números.");
+                System.out.println("Error: introduce solo números.");
             }
         }
+        }
     }
-}
+
