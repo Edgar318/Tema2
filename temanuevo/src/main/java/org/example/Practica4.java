@@ -16,7 +16,6 @@ public class Practica4 {
 
                 if (partes.length != 3) {
                     System.out.println("Formato incorrecto, debe ser dd/mm/aaaa.");
-                    continue;
                 }
 
                 int dia = Integer.parseInt(partes[0]);
