@@ -53,10 +53,12 @@ public class Practica2 {
         case "división":
             if (num2 == 0) {
                 System.out.println("Error: División por cero.");
-            } else {
-                int resultado4 = num1 / num2;
+            } 
+                System.out.println("Dime el numero bien: ")
+                int num11  = teclado.nextInt();
+                int resultado4 = num1 / num11;
                 System.out.println("El resultado de la división sería: " + resultado4);
-            }
+            
             break;
         case "r":
             int resultado5 = num1 * num2;
