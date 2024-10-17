@@ -3,19 +3,26 @@ package org.example;
 import java.util.Scanner;
 
 public class Practica2 {
-    public void calculadora(){
+    public void calculadora() {
         Scanner teclado = new Scanner(System.in);
+
         System.out.println("Dime tu primer numero de la operacion: ");
+
         int num1 = teclado.nextInt();
+
         System.out.println("Dime la operacion que quieres: ");
+
         String operacion = teclado.next();
-        if (operacion == "r"){
-            int resultado11 = num1*num1;
+
+        String raiz = "r";
+
+        if (operacion == raiz) {
+            int resultado11 = num1 * num1;
             System.out.println("El resultado es: " + resultado11);
-        }else {
+        } else {
+
             System.out.println("Dime tu segundo numero para hacer la operacion: ");
             int num2 = teclado.nextInt();
-
 
             switch (operacion) {
                 case ("+"):
@@ -35,10 +42,9 @@ public class Practica2 {
                     System.out.println("El resultado es " + resultado4);
                     break;
                 default:
-
+                    System.out.println("Esa operacion no esta en esta calculadora");
                     break;
-
-
-        }    }
+            }
+        }
     }
 }
