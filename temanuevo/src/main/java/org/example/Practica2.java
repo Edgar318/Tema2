@@ -15,17 +15,13 @@ public class Practica2 {
             System.out.print("Introduce el primer numero: ");
             try {
                 num1 = Integer.parseInt(teclado.nextLine());
-                if (num1 <= 0) {
-                    System.out.println("Error El número debe ser positivo y mayor a 0.");
-                } else {
-                    entrada = true;
-                }
+                entrada = true;
             } catch (NumberFormatException e) {
-                System.out.println("Error pon un numero valido.");
+                System.out.println("Error introduce un numero.");
             }
         }
 
-        System.out.print("Introduce la operacion que quieras hacer (+,-,*,/,r): ");
+        System.out.print("Introduce la operacion que quieras hacer (+,-,*,/, r): ");
         operacion = teclado.nextLine();
 
         if (!operacion.equals("r")) {
@@ -34,13 +30,9 @@ public class Practica2 {
                 System.out.print("Introduce el segundo numero: ");
                 try {
                     num2 = Integer.parseInt(teclado.nextLine());
-                    if (num2 <= 0) {
-                        System.out.println("Error El numero debe ser positivo y mayor a 0.");
-                    } else {
-                        entrada = true;
-                    }
+                    entrada = true;
                 } catch (NumberFormatException e) {
-                    System.out.println("Error pon un numero valido.");
+                    System.out.println("Error introduce un numero.");
                 }
             }
         }
@@ -58,15 +50,44 @@ public class Practica2 {
                 System.out.println("Resultado: " + resultado3);
                 break;
             case "/":
-                 int resultado4 = num1 / num2;
-                 System.out.println("El resultado de la división es: " + resultado4);
+                while (num2 == 0) {
+                    System.out.println("No puede ser 0 , dime un numero nuevo:  ");
+                    num2 = teclado.nextInt();
+                }
+                int resultado4 = num1 / num2;
+                System.out.println("El resultado de la división es: " + resultado4);
                 break;
             case "r":
                 int resultado5 = num1 * num2;
                 System.out.println("Resultado: " + resultado5);
                 break;
+            case "suma":
+                int resultado6 = num1 + num2;
+                System.out.println("Resultado: " + resultado6);
+                break;
+            case "resta":
+                int resultado7 = num1 - num2;
+                System.out.println("Resultado: " + resultado7);
+                break;
+            case "multiplicacion":
+                int resultado8 = num1 * num2;
+                System.out.println("Resultado: " + resultado8);
+                break;
+            case "division":
+                    while (num2 == 0) {
+                        System.out.println("No puede ser 0 , dime un numero nuevo: ");
+                        num2 = teclado.nextInt();
+                    }
+                int resultado9 = num1 / num2;
+                System.out.println("Resultado: " + resultado9);
+                break;
+            case "raiz":
+                int raiz = num1*num2;
+                System.out.println("Resultado: " + raiz);
+                break;
             default:
                 System.out.println("No existe la operacion que quieres.");
+                break;
         }
     }
 }
