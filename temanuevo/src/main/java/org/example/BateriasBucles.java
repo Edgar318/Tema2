@@ -70,4 +70,16 @@ public class BateriasBucles {
         }
     }
 
+    public void ejercicio6(){
+        Scanner teclado = new Scanner(System.in);
+        int num = 1;
+        for (int i = 1;i<=10;i++){
+            System.out.println("Inserta nº"+i + " :");
+            int num2 = teclado.nextInt();
+            System.out.println("num2 = " + num2);
+        }
+        
+
+    }
+
 }
