@@ -12,18 +12,18 @@ public class Practica3 {
             if (numero.length() == 10){
                 break;
             }else{
-                System.out.println("El ISBN esta mal.")
+                System.out.println("El ISBN esta mal.");
             } 
         }
 
         int sum = 0;
-        for (int = 0 ; i < 9; i++){
-        int digito = Character.getNumericValue(numero.charAt(i))
+        for (int i = 0 ; i < 9; i++){
+        int digito = Character.getNumericValue(numero.charAt(i));
         sum += (10 - i) * digito;
         }
 
         char digito2 = numero.charAt(9);
-        if (digito2 == "X" || digito2 == "x"){
+        if (digito2 = "X" || digito2 = "x"){
             sum += 10;
         }else{
             int digito = Character.getNumericValue(digito2);
@@ -32,9 +32,9 @@ public class Practica3 {
         }    
 
         if (sum % 11 == 0){
-                System.out.println("El " + numero + " es valido.")
+                System.out.println("El " + numero + " es valido.");
         }else{
-                System.out.println("El " + numero + " es valido.")
+                System.out.println("El " + numero + " es valido.");
         }      
     }
 }
