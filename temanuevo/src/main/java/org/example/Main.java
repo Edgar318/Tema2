@@ -1,7 +1,7 @@
 package org.example;
 public class Main {
     public static void main(String[] args) {
-            preexamen preexamen1 = new preexamen();
-            preexamen1.preexamen1();
+            examenT2 ejercicio2= new examenT2();
+            ejercicio2.ejercicio2();
         }
     }

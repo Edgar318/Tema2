@@ -217,6 +217,62 @@ public class preexamen {
 
     }
 
+    public void ibsn(){
+        Scanner teclado = new Scanner(System.in);
+        String numero;
+        while (true) {
+            System.out.println("Dime el ISBN que quieras comprobar: ");
+            numero = teclado.next();
+            if (numero.length() == 10) {
+                break;
+            } else {
+                System.out.println("El ISBN esta mal.");
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < 9; i++) {
+            int digito = Character.getNumericValue(numero.charAt(i));
+            sum += (10 - i) * digito;
+        }
+        char digito2 = numero.charAt(9);
+        if (digito2 == 'X' || digito2 == 'x') {
+            sum += 10;
+        } else {
+            int digito = Character.getNumericValue(digito2);
+            sum += digito;
+        }
+        if (sum % 11 == 0) {
+            System.out.println("El " + numero + " es válido.");
+        } else {
+            System.out.println("El " + numero + " no es válido.");
+        }
+    }
+
+    public void sumardig(){
+        Scanner scanner = new Scanner(System.in);
+
+        // Pedir al usuario un número
+        System.out.print("Introduce un número: ");
+        String numero = scanner.nextLine();
+
+        int suma = 0;
+
+        // Sumar los dígitos del número utilizando char
+        for (int i = 0; i < numero.length(); i++) {
+            // Obtener el carácter en la posición i
+            char digitoChar = numero.charAt(i);
+
+            // Convertir el carácter a dígito (su valor numérico)
+            // Restamos '0' para convertir el char a int
+            int digito = digitoChar - '0';
+            suma += digito;
+        }
+
+        // Mostrar el resultado
+        System.out.println("La suma de los dígitos es: " + suma);
+
+    }
+
 }
 
 
