@@ -71,12 +71,12 @@ public class Aleatorio {
         }
     }
 
-    public void ejercicio4(){
+    public void ejercicio4() {
         Random aleatorio = new Random();
 
         String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        int longitud = aleatorio.nextInt(3)+6;
+        int longitud = aleatorio.nextInt(3) + 6;
 
         String contrasenya = "";
         int posicion;
